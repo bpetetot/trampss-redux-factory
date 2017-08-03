@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux'
-import todos from './todos'
+import { keyValue } from 'trampss-redux-factory'
 
-const rootReducer = combineReducers({
-  todos
+export const todos = keyValue({ key: 'id', name: 'todos' })
+
+export default combineReducers({
+  todos,
 })
-
-export default rootReducer
